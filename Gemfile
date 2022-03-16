@@ -9,6 +9,7 @@ gem "bootstrap-sass", "3.4.1"
 gem "config", "~> 4.0.0"
 gem "figaro", "~> 1.2.0"
 gem "jbuilder", "~> 2.7"
+gem "jquery-rails", "~> 4.4"
 gem "mysql2", "0.5.3"
 gem "pagy", "~> 5.10.1"
 gem "puma", "~> 5.0"
@@ -16,7 +17,7 @@ gem "rails", "~> 6.1.5"
 gem "rails-i18n", "~> 7.0.3"
 gem "sass-rails", ">= 6"
 gem "turbolinks", "~> 5"
-gem "webpacker", "~> 5.0"
+gem "webpacker", "~> 5.4", ">= 5.4.3"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

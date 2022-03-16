@@ -1,2 +1,11 @@
-emails:
-  admin: admin@example.com
+regex:
+  email: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/'
+digits:
+  digit_2: 2
+  digit_6: 6
+  digit_50: 50
+  digit_255: 255
+gravatar:
+  url: "https://secure.gravatar.com/avatar"
+  default_size: 50
+  size_200: 200

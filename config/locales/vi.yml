@@ -42,3 +42,96 @@ vi:
       content_html: >
         Xây dựng bằng Ruby on Rails
         bởi NVA.Tuan, TX.Phuc
+
+  users:
+    not_found: "Không tìm thấy người dùng"
+    not_logged_in: "Đăng nhập trước"
+    new:
+      title: "Đăng ký"
+      header: "Đăng ký"
+      submit: "Tạo tài khoản"
+      success: "Chào mừng đến với LMS"
+      failed: "Đăng ký thất bại!"
+
+  sessions:
+    destroy: "Tạm biệt!"
+    create:
+      failed: "Sai thông tin đăng nhập rồi"
+      unactivated: "Bạn chưa kích hoạt tài khoản qua email"
+    new:
+      header: "Đăng nhập"
+      title: "Đăng nhập"
+      email: "Địa chỉ email"
+      password: "Mật khẩu"
+      invite: "Chưa có tài khoản ?"
+      login_btn: "Đăng nhập"
+      remember_me: "Ghi nhớ đăng nhập"
+      forgot_password: "Quên mật khẩu"
+
+  account_activations:
+    edit:
+      success: "Kích hoạt tài khoản thành công"
+      failed: "Liên kết không tồn tại"
+
+  password_resets:
+    update:
+      error: "không được để trống"
+      success: "Mật khẩu đã được cập nhật lại!"
+    expired: "Liên kết đã hết hạn"
+    invalid_link: "Liên kết không hợp lệ"
+    create:
+      instruction: "Đọc email và làm theo hướng dẫn"
+    edit:
+      title: "Đổi mật khẩu"
+      submit: "Lưu mật khẩu"
+    new:
+      title: "Quên mật khẩu"
+      submit: "Xác nhận"
+
+  user_mailer:
+    account_activation:
+      subject: "Kích hoạt tài khoản"
+      greeting: "Xin chào"
+      body: "Chào mừng đến với LMS. Click vào bên dưới để kích hoạt tài khoản"
+      link_title: "Kích hoạt"
+    password_reset:
+      subject: "Thay đổi mật khẩu"
+      instruction: "Nếu muốn đổi mật khẩu thì click vào link bên dưới"
+      expire_time: "Link này sẽ hết hạn trong %{suffix}"
+      time_singular: "giờ"
+      warning: "Nếu bạn không phải là người đưa ra yêu cầu này thì vui lòng bỏ qua email này"
+      link_title: "Đổi mật khẩu"
+
+  shared:
+    error_messages:
+      prefix: "Có %{err_suffix} trong biểu mẫu đăng ký."
+      singular: "lỗi"
+
+  activerecord:
+    attributes:
+      user:
+        name: "Tên"
+        email: "Địa chỉ Email"
+        password: "Mật khẩu"
+        password_confirmation: "Mật khẩu xác nhận"
+        password_digest: "Mật khẩu"
+
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "không được để trống"
+              too_long: "không được quá 50 ký tự"
+            email:
+              blank: "không được để trống"
+              too_long: "không được quá 255 ký tự"
+              invalid: "không đúng định dạng"
+              taken: "đã được sử dụng"
+            password:
+              blank: "không được để trống!"
+            password_digest:
+              blank: "không được để trống!"
+              too_short: "tối thiểu 6 ký tự!"
+            password_confirmation:
+              confirmation: "không trùng khớp!"

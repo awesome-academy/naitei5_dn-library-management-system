@@ -10,9 +10,6 @@
 }
 
 /* Universal */
-* {
-  color: $blue;
-}
 
 body {
   padding-top: 60px;
@@ -72,6 +69,7 @@ aside {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  color: $blue;
 }
 
 h1 {
@@ -93,6 +91,7 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  color: $blue;
 }
 
 /* Header */
@@ -108,7 +107,7 @@ p {
     padding-top: 9px;
     font-weight: bold;
     &:hover {
-      color: black;
+      color: $black;
       text-decoration: none;
     }
   }
@@ -127,18 +126,64 @@ footer {
       color: $gray-dark;
     }
   }
+
   small {
     float: left;
   }
+
   ul {
     float: right;
     list-style: none;
+
     li {
       float: left;
       margin-left: 15px;
     }
   }
 }
+
+/* side-bars */
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0;
+    }
+  }
+
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
 
 /* Forms */
 input, textarea, select, .eneditable-input {
@@ -147,9 +192,27 @@ input, textarea, select, .eneditable-input {
   margin-bottom: 15px;
   @include box_sizing;
 }
+
 input {
   height: auto !important;
 }
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+/* form */
 
 #error_explanation {
   color: $red;
@@ -158,6 +221,7 @@ input {
     margin: 0 0 30px 0;
   }
 }
+
 .field_with_errors {
   @extend .has-error;
   .form-control {
