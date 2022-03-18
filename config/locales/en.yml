@@ -12,6 +12,8 @@ en:
       need_log_in: Please log in before viewing this page.
       no_permission: No permission error
       unauthorized: You don't have permission.
+      invalid_return_date: must be greater than borrowed date
+      check_blank_date: Date can not be blank!
 
   loc:
     english: English
@@ -50,6 +52,8 @@ en:
     header:
       admin_page: Admin Page
       borrow_requests: Borrow Requests
+      profile: Profile
+      log_out: Log Out
     footer:
       content_html: >
         Made with Ruby on Rails
@@ -142,6 +146,7 @@ en:
       quantity: Quantity
       category: Category
       publisher: Publisher
+      borrow: Borrow
 
   borrow_requests:
     td_date:
@@ -176,6 +181,22 @@ en:
       cancel: Cancel
       comment: Comment
       borrower: Borrower
+      cancel_confirm: Comfirm to cancel request?
+    new:
+      title: New Borrow Request
+      borrow: Borrow
+      not_found: Book not found
+      book_out_of_stock: Book out of stock
+    create:
+      not_found: Book not found
+      borrowed_book: You have already borrowed this book
+      out_of_date: You have books that are needed to return before new requests
+      over_quantity_request: Over quantity of borrow requests
+      request_sent_successfully: Request Sent Successfully!
+      request_sent_failed: Request Sent Failed!
+    cancel:
+      cancel_success: Request cancel success!
+      cancel_failure: Request cancel failed!
 
   admin:
     menu:

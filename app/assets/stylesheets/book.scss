@@ -27,6 +27,12 @@ ul.book-container {
 
 
 div.book-details {
+  .button {
+    color: $white;
+    margin-left: 15px;
+    width: 170px;
+    text-decoration: none;
+  }
   h2.book-title {
     text-align: left;
     font-size: 28px;

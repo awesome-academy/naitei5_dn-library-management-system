@@ -19,6 +19,15 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
+
     resources :users
+
+    resources :users do
+      resources :borrow_requests
+    end
+
+    match "borrow_requests/:id/cancel", to: "borrow_requests#cancel",
+                                        as: "user_borrow_request_cancel",
+                                        via: :post
   end
 end

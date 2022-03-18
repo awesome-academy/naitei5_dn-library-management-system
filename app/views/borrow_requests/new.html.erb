@@ -1,0 +1,24 @@
+<h1><%= t ".title" %></h1>
+<hr>
+
+<div class="container" style="padding: auto">
+  <div class="row">
+    <div class="col-md-4 center">
+      <%= image_tag get_book_cover(@book), alt: t(".default_book_alt"), class: "book-cover"  %>
+      <h2 class="br-title"><%= @book.title %></h2>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-5">
+      <%= form_for([:user, @borrow_req]) do |f| %>
+        <%= render "shared/error_messages", object: f.object%>
+        <%= f.label :borrowed_date %> (mm/dd/yyyy)
+        <%= f.date_field :borrowed_date, value: Date.today, readonly: true, class: "form-control" %>
+        <%= f.label :return_date %> (mm/dd/yyyy)
+        <%= f.date_field :return_date, class: "form-control", style: "margin-bottom: 10px" %>
+        <%= f.submit t(".borrow"), class: "btn btn-primary" %>
+        <%= f.hidden_field :status, value: :pending %>
+        <%= f.hidden_field :book_id, value: @book.id %>
+      <% end %>
+    </div>
+  </div>
+</div>

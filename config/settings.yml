@@ -19,3 +19,6 @@ defaults:
 
 pagy:
   items_per_page: 12
+
+borrow_request:
+  max_allowed: 5
