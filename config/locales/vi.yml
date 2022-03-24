@@ -8,9 +8,10 @@ vi:
       login: Đăng nhập
       books: Sách
       signup: Đăng ký
+    search: Tìm
     error:
       need_log_in: Xin vui lòng đăng nhập trước khi xem trang này
-      no_permission: Bạn không có quyền truy cập tài nguyên này.
+      no_permission: Bạn không có quyền truy cập tài nguyên này
       unauthorized: Bạn không được cấp quyền.
 
   loc:
@@ -198,6 +199,11 @@ vi:
       borrower: Người mượn
 
   admin:
+    select:
+      created_at: Ngày tạo
+      return_date: Ngày trả
+      borrowed_date: Ngày mượn
+      status: Trạng thái
     menu:
       users: Người dùng
       books: Sách

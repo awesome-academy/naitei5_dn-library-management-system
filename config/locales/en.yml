@@ -8,6 +8,7 @@ en:
       login: Login
       books: Books
       signup: Sign Up
+    search: Search
     error:
       need_log_in: Please log in before viewing this page.
       no_permission: No permission error
@@ -161,6 +162,7 @@ en:
       need_log_in: Please log in before viewing this page.
       user: User
       book: Book
+      creation_date: Created At
       status: Status
       borrow_date: Borrow Date
       return_date: Return Date
@@ -178,6 +180,11 @@ en:
       borrower: Borrower
 
   admin:
+    select:
+      created_at: Creation Date
+      return_date: Return Date
+      borrowed_date: Borrowed Date
+      status: Status
     menu:
       users: Users
       books: Books
@@ -190,9 +197,10 @@ en:
         welcome: Welcome to LMS Admin Page.
 
     borrow_requests:
-      borrow_request:
+      td_date:
         n_a: N/A
         not_yet: Not yet
+      borrow_request:
         detail: Detail
         pending: Pending
         ready: Ready
@@ -203,7 +211,6 @@ en:
       index:
         title: Borrow Requests
         breq_empty: There are no borrow requests.
-        created_at: Created At
         user: User
         book: Book
         status: Status

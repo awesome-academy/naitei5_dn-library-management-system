@@ -1,5 +1,76 @@
 <h1><%= t ".title" %></h1>
 <hr>
+  <p>
+    <button class="btn-sm" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      <%= t ".search_form" %> <span class="glyphicon glyphicon-search"></span>
+    </button>
+    <%= link_to admin_borrow_requests_path, class: "btn-sm" do %>
+      <%= t ".reset" %> <span class="glyphicon glyphicon-repeat"></span>
+    <% end %>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      <%= form_with url: admin_borrow_requests_path, method: :get, class: "admin-form" do |f| %>
+        <div class="row">
+          <div class="col-xs-2">
+            <%= f.label :status, t(".search_status") %>
+
+            <div class="form-check form-check-inline">
+              <%= f.check_box :status_pending, class: "form-check-input" %>
+              <%= f.label :status_pending, t("borrow_requests.borrow_request.pending"), class: "form-check-label" %>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <%= f.check_box :status_ready, class: "form-check-input" %>
+              <%= f.label :status_ready, t("borrow_requests.borrow_request.ready"), class: "form-check-label" %>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <%= f.check_box :status_borrowed, class: "form-check-input" %>
+              <%= f.label :status_borrowed, t("borrow_requests.borrow_request.borrowed"), class: "form-check-label" %>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <%= f.check_box :status_returned, class: "form-check-input" %>
+              <%= f.label :status_returned, t("borrow_requests.borrow_request.returned"), class: "form-check-label" %>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <%= f.check_box :status_rejected, class: "form-check-input" %>
+              <%= f.label :status_rejected, t("borrow_requests.borrow_request.rejected"), class: "form-check-label" %>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <%= f.check_box :status_cancelled, class: "form-check-input" %>
+              <%= f.label :status_cancelled, t("borrow_requests.borrow_request.cancelled"), class: "form-check-label" %>
+            </div>
+          </div>
+
+          <div class="col-xs-10">
+            <%= f.label :keyword, t(".search_for") %>
+            <%= f.text_field :keyword, class: "form-control" %>
+
+            <%= f.label :sort_by, t(".sort_by") %>
+
+            <%= f.select :sort_by,
+                          options_for_select([
+                            [t("admin.select.created_at"), "created_at"],
+                            [t("admin.select.borrowed_date"), "borrowed_date"],
+                            [t("admin.select.return_date"), "return_date"],
+                            [t("admin.select.status"), "status"]]
+                          ),
+                          {}, {class: "form-control"}
+            %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <%= f.submit t("global.search"), class: "btn btn-primary", name: nil %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 
 <% if @borrow_reqs.blank? %>
   <p class="center bg-warning"><%= t ".breq_empty" %></p>

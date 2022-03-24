@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2022_03_16_080223) do
   create_table "books", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title"
     t.string "description"
-    t.integer "quantity"
+    t.integer "quantity", default: 0
     t.date "published_date"
     t.bigint "category_id"
     t.bigint "publisher_id"

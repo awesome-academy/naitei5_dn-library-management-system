@@ -211,3 +211,22 @@ input {
     font-size: x-large;
   }
 }
+
+.form-check-inline {
+  white-space: nowrap;
+}
+
+input.form-check-input {
+  max-width: 20px;
+}
+
+.admin-form {
+  label.form-check-label {
+    color: $black;
+    font-weight: 100;
+  }
+
+  label {
+    color: $black;
+  }
+}
