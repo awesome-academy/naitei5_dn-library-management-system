@@ -44,9 +44,11 @@
         <span class="status <%= @borrow_req.status %>"> <%= @borrow_req.status %> </span>
     </div>
     <div class="col-xs-6 text-right">
-      <button type="button" class="btn btn-danger" <%= @borrow_req.status_pending? ? "" : "disabled" %> >
-        <%= t ".cancel"%>
-      </button>
+      <%= link_to user_borrow_request_cancel_path(@borrow_req), method: :post, data: { confirm: t(".cancel_confirm") } do %>
+        <button type="button" class="btn btn-danger" <%= "disabled" unless @borrow_req.status_pending? %> >
+          <%= t ".cancel"%>
+        </button>
+      <% end %>
     </div>
   </div>
 </div>

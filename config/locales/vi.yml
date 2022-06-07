@@ -12,6 +12,8 @@ vi:
       need_log_in: Xin vui lòng đăng nhập trước khi xem trang này
       no_permission: Bạn không có quyền truy cập tài nguyên này.
       unauthorized: Bạn không được cấp quyền.
+      invalid_return_date: phải sau ngày ngày mượn
+      check_blank_date: Date can not be blank!
 
   loc:
     english: Tiếng Anh
@@ -51,10 +53,13 @@ vi:
     header:
       admin_page: Trang Admin
       borrow_requests: Yêu cầu mượn sách
+      profile: Hồ sơ
+      log_out: Đăng xuất
     footer:
       content_html: >
         Xây dựng bằng Ruby on Rails
         bởi NVA.Tuan, TX.Phuc
+
   users:
     not_found: "Không tìm thấy người dùng"
     not_logged_in: "Đăng nhập trước"
@@ -127,7 +132,9 @@ vi:
         password: "Mật khẩu"
         password_confirmation: "Mật khẩu xác nhận"
         password_digest: "Mật khẩu"
-
+      borrow_request:
+        borrowed_date: Ngày mượn
+        return_date: Ngày trả
     errors:
       models:
         user:
@@ -160,6 +167,7 @@ vi:
       quantity: Số lượng
       category: Thể loại
       publisher: Nhà xuất bản
+      borrow: Mượn sách
 
   borrow_requests:
     td_date:
@@ -175,6 +183,7 @@ vi:
       returned: Đã trả
       rejected: Bị từ chối
       cancelled: Đã hủy
+      over_quantity: Vượt quá số lượng sách có thể yêu cầu (5 cuốn)
     index:
       title: Yêu cầu mượn sách
       breq_empty: Không tồn tại yêu cầu mượn sách.
@@ -196,6 +205,22 @@ vi:
       cancel: Hủy
       comment: Bình luận
       borrower: Người mượn
+      cancel_confirm: Xác nhận hủy yêu cầu?
+    new:
+      title: Yêu cầu mượn sách
+      borrow: Mượn sách
+      not_found: Không tìm thấy sách
+      book_out_of_stock: Hết sách rồi :(
+    create:
+      not_found: Không tìm thấy sách
+      borrowed_book: Bạn đã mượn cuốn sách này rồi
+      out_of_date: Bạn có sách cần phải trả đúng hẹn trước khi mượn thêm
+      over_quantity_request: Vượt quá số lượng yêu cầu mượn sách
+      request_sent_successfully: Gửi yêu cầu thành công!
+      request_sent_failed: Gửi yêu cầu thất bại!
+    cancel:
+      cancel_success: Hủy yêu cầu thành công!
+      cancel_failure: Hủy yêu cầu thất bại!
 
   admin:
     menu:

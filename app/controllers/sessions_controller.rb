@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
     user = User.find_by email: email.downcase
     if user&.authenticate password
       login user
+      current_user
       remember_user user if remember_me == "1"
       redirect_back_or user
     else
